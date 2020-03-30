@@ -1,12 +1,11 @@
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import RomRequestViewset, Emp
+from .views import WebAppViewset
 
 router = DefaultRouter()
-router.register(r'romrequest', RomRequestViewset)
+router.register(r'webapp', WebAppViewset)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('empstats', Emp),
 ]

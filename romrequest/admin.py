@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import RomRequest, Employees, CEmployees
+from .models import WebApp
 from import_export.admin import ImportExportModelAdmin
 
 
-@admin.register(RomRequest,Employees,CEmployees)
+@admin.register(WebApp)
 class ViewAdmin(ImportExportModelAdmin):
     pass

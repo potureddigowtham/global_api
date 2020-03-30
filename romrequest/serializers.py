@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import RomRequest, Employees, CEmployees
+from .models import WebApp
 
-class RomRequestSerializer(serializers.ModelSerializer):
+class WebAppSerializer(serializers.ModelSerializer):
     class Meta:
-        model = RomRequest
+        model = WebApp
         fields = '__all__'

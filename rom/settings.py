@@ -13,7 +13,7 @@ SECRET_KEY = '_7w_7n49sn#(boc($ha%&*(u@&!6^%x-jxq%5+7$f^@=b_)n(t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'import_export',
     'rest_framework',
     'romrequest',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -38,7 +39,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL=True
 
 ROOT_URLCONF = 'rom.urls'
 
